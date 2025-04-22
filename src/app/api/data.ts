@@ -58,7 +58,7 @@ export const news: IData_SnippetNews[] = [
     DOM: 'anotherexample.com',
     SENT: 'negative',
     LANG: 'en',
-    AU: [],
+    AU: ['Emily', 'Lily', 'Mali'],
     FAV: '/favicons/def789ghi012.png',
     KW: [
       {

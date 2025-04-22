@@ -2,6 +2,7 @@
 import '@ant-design/v5-patch-for-react-19';
 import { useEffect, useState } from 'react';
 import { Space, Spin, Button, Alert } from 'antd';
+import { NewsCard } from '@/app/components/NewsCard/NewsCard';
 import { getNews } from '@/app/api/fakeBackend';
 import styles from './NewsCardsList.module.css';
 
@@ -38,7 +39,11 @@ export const NewsCardsList = () => {
   }, []);
 
   return (
-    <Space direction="vertical" size="middle" style={{ display: 'flex' }}>
+    <Space
+      direction="vertical"
+      align="center"
+      size="middle"
+      style={{ display: 'flex', width: '100%' }}>
       {isLoading === LoadingType.ERROR && (
         <Alert
           message="Internal Server Error"
@@ -60,7 +65,7 @@ export const NewsCardsList = () => {
       {isLoading === LoadingType.LOADED && (
         <>
           {news.length > 0 ? (
-            news.map((el) => <p key={el.ID}> {el.TI} </p>)
+            news.map((el) => <NewsCard news={el} key={el.ID} />)
           ) : (
             <Alert
               message="There is no news yet, please try again later."

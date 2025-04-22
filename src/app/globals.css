@@ -3,6 +3,7 @@
   --foreground: #ffffff;
   --general: #0000ff;
   --secondary: #999999;
+  --secondary-opacity: rgba(153, 153, 153, 0.2);
   --positive: #00ff00;
   --negative: #ff0000;
 }
@@ -14,9 +15,6 @@ body {
 }
 
 body {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;

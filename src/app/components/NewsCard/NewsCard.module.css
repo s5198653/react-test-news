@@ -1,0 +1,13 @@
+.card {
+  width: 100%;
+  overflow: hidden;
+  background-color: var(--background);
+  border-color: var(--secondary);
+  color: var(--foreground);
+}
+
+.card__link {
+  padding: 10px;
+  background-color: var(--secondary-opacity);
+  border-radius: 15px;
+}
