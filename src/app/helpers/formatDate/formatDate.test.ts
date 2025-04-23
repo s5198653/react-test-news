@@ -2,21 +2,23 @@ import { describe, it, expect } from 'vitest';
 import { formatDate } from './formatDate';
 
 describe('formatDate', () => {
-  it('должен корректно форматировать дату в [day, month, year]', () => {
-    const inputDate = '2025-01-01T00:00:00Z';
-    const result = formatDate(inputDate);
+  it('should correctly format date into [day, month, year]', () => {
+    const result = formatDate('2025-01-01T00:00:00Z');
+
     expect(result).toEqual(['01', 'January', '2025']);
   });
 
-  it('должен корректно форматировать дату с двузначным днем', () => {
-    const inputDate = '2025-12-31T00:00:00Z';
-    const result = formatDate(inputDate);
+  it('should correctly format date with two-digit day', () => {
+    const result = formatDate('2025-12-31T00:00:00Z');
+
     expect(result).toEqual(['31', 'December', '2025']);
   });
 
-  it('должен корректно работать с объектом Date', () => {
+  it('should correctly handle Date object input', () => {
     const inputDate = new Date('2025-05-15T00:00:00Z');
+
     const result = formatDate(inputDate.toISOString());
+
     expect(result).toEqual(['15', 'May', '2025']);
   });
 });

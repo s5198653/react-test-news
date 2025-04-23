@@ -2,24 +2,24 @@ import { describe, it, expect } from 'vitest';
 import { capitalize } from './capitalize';
 
 describe('capitalize', () => {
-  it('преобразует первую букву строчного слова в заглавную', () => {
+  it('converts the first letter of a lowercase word to uppercase', () => {
     expect(capitalize('hello')).toBe('Hello');
   });
 
-  it('не изменяет первую букву, если она уже заглавная', () => {
+  it('does not change the first letter if it is already uppercase', () => {
     expect(capitalize('Hello')).toBe('Hello');
   });
 
-  it('возвращает пустую строку, если входная строка пустая', () => {
+  it('returns an empty string if the input is empty', () => {
     expect(capitalize('')).toBe('');
   });
 
-  it('корректно обрабатывает строки из одного символа', () => {
+  it('correctly handles single-character strings', () => {
     expect(capitalize('a')).toBe('A');
     expect(capitalize('A')).toBe('A');
   });
 
-  it('не изменяет остальные символы строки', () => {
+  it('does not change the rest of the characters in the string', () => {
     expect(capitalize('hELLO')).toBe('HELLO');
   });
 });
