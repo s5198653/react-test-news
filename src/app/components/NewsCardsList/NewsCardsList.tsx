@@ -1,7 +1,7 @@
 'use client';
 import '@ant-design/v5-patch-for-react-19';
 import { useEffect, useState } from 'react';
-import { Space, Spin, Button, Alert } from 'antd';
+import { Space, Spin, Button, Alert, Flex } from 'antd';
 import { NewsCard } from '@/app/components/NewsCard/NewsCard';
 import { getNews } from '@/app/api/fakeBackend';
 import styles from './NewsCardsList.module.css';
@@ -39,11 +39,7 @@ export const NewsCardsList = () => {
   }, []);
 
   return (
-    <Space
-      direction="vertical"
-      align="center"
-      size="middle"
-      style={{ display: 'flex', width: '100%' }}>
+    <Flex vertical gap={15} align="center">
       {isLoading === LoadingType.ERROR && (
         <Alert
           message="Internal Server Error"
@@ -74,6 +70,6 @@ export const NewsCardsList = () => {
           )}
         </>
       )}
-    </Space>
+    </Flex>
   );
 };
