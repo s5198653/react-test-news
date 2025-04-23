@@ -4,12 +4,14 @@
   --general: #0000ff;
   --secondary: #999999;
   --secondary-opacity: rgba(153, 153, 153, 0.2);
-  --positive: #00ff00;
-  --negative: #ff0000;
+  --positive: #b0f37e;
+  --negative: #ff4d4f;
+  --neutral: #91caff;
 }
 
 html,
 body {
+  min-width: 350px;
   max-width: 100vw;
   overflow-x: hidden;
 }

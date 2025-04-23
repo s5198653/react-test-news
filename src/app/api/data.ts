@@ -56,7 +56,7 @@ export const news: IData_SnippetNews[] = [
     URL: 'https://www.anotherexample.com/uk-mobile-banking-security-2025',
     DP: '2025-03-08T15:30:00',
     DOM: 'anotherexample.com',
-    SENT: 'negative',
+    SENT: 'neutral',
     LANG: 'en',
     AU: ['Emily', 'Lily', 'Mali'],
     FAV: '/favicons/def789ghi012.png',
@@ -104,9 +104,9 @@ export const news: IData_SnippetNews[] = [
     URL: 'https://www.example.com/mobile-banking-risks-uk-2025',
     DP: '2025-03-07T10:00:00',
     DOM: 'example.com',
-    SENT: 'negative',
+    SENT: 'positive',
     LANG: 'en',
-    AU: [],
+    AU: ['Ivan'],
     FAV: '/favicons/abc123def456.png',
     KW: [
       {

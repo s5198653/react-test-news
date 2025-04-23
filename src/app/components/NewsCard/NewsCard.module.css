@@ -6,6 +6,10 @@
   color: var(--foreground);
 }
 
+.card:hover {
+  border-color: var(--neutral);
+}
+
 .card__link {
   padding: 10px;
   background-color: var(--secondary-opacity);
