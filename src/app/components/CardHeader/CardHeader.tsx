@@ -23,7 +23,7 @@ export const CardHeader: FC<CardHeaderProps> = ({
   onChange,
 }) => {
   return (
-    <Space direction="vertical" size="small">
+    <Space direction="vertical" size="small" className={styles.card__header}>
       <Flex justify="space-between" gap={20}>
         <Space size={10} wrap>
           <Flex gap={2}>

@@ -1,3 +1,7 @@
+.card__header {
+  width: 100%;
+}
+
 .card__header__sent {
   margin: 0;
   border: none;
