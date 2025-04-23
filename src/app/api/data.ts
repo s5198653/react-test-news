@@ -2,6 +2,54 @@ import type { IData_SnippetNews } from '@/app/types/data';
 
 export const news: IData_SnippetNews[] = [
   {
+    ID: 260855435,
+    TI: 'Mobile banking risks persist: 45% of UK users operate on unsecured smartphones',
+    AB: 'A recent study highlights that nearly half of UK consumers use mobile banking on devices lacking proper security measures. Despite concerns about hacking, many neglect antivirus protection on their smartphones, increasing vulnerability to cyber threats. The research, commissioned by a cybersecurity firm, underscores the gap between desktop and mobile security practices among users.',
+    URL: 'https://www.example.com/mobile-banking-risks-uk-2025',
+    DP: '2025-03-07T10:00:00',
+    DOM: 'example.com',
+    SENT: 'positive',
+    LANG: 'en',
+    AU: ['Ivan'],
+    FAV: '/favicons/abc123def456.png',
+    KW: [
+      {
+        value: 'mobile security',
+        count: 8,
+      },
+      {
+        value: 'cybersecurity',
+        count: 6,
+      },
+      {
+        value: 'banking apps',
+        count: 3,
+      },
+    ],
+    HIGHLIGHTS: [
+      '…study reveals that 45% of UK consumers use <kw>mobile banking</kw> on unsecured smartphones, exposing themselves to potential <kw>cyberattacks</kw>…',
+      '…despite widespread concern about security breaches, many users fail to install antivirus software on their <kw>mobile devices</kw>…',
+      '…the research emphasizes the need for improved <kw>mobile security</kw> awareness and adoption among <kw>banking app</kw> users…',
+    ],
+    REACH: 2500,
+    CNTR: 'United Kingdom',
+    CNTR_CODE: 'gb',
+    TRAFFIC: [
+      {
+        value: 'United Kingdom',
+        count: 0.85,
+      },
+      {
+        value: 'Canada',
+        count: 0.05,
+      },
+      {
+        value: 'Australia',
+        count: 0.03,
+      },
+    ],
+  },
+  {
     ID: 260855433,
     TI: 'Mobile bankers left vulnerable: 47% of UK consumers manage finances on insecure smartphones',
     AB: 'Mobile bankers left vulnerable: 47% of UK consumers manage finances on insecure smartphones\nAugust 2020 by Kaspersky\nNew research has revealed that UK consumers carry out online banking on smartphones and devices that are potentially vulnerable to a security breach, despite making sure they keep their desktop or laptop computers safe. In a study commissioned by Kaspersky, nearly half (47%) of smartphone owners who use a banking app don’t protect their mobile device with antivirus or security sof...',
@@ -73,11 +121,23 @@ export const news: IData_SnippetNews[] = [
         value: 'fraud prevention',
         count: 4,
       },
+      {
+        value: 'mobile',
+        count: 19,
+      },
+      {
+        value: 'software',
+        count: 7,
+      },
+      {
+        value: 'prevention',
+        count: 14,
+      },
     ],
     HIGHLIGHTS: [
-      '…findings indicate that 47% of UK mobile banking users operate on devices without antivirus protection…',
-      '…users remain concerned about hacking but often neglect to secure their smartphones adequately…',
-      '…calls for banks and consumers to enhance mobile security practices to reduce fraud risks…',
+      '…findings indicate that 47% of UK <kw>mobile banking</kw> users operate on devices without antivirus protection…',
+      '…users remain concerned about hacking but often neglect to secure their <kw>mobile</kw>phones adequately…',
+      '…calls for banks and consumers to enhance <kw>mobile</kw> security practices to reduce <kw>fraud prevention</kw> risks…',
     ],
     REACH: 2450,
     CNTR: 'United Kingdom',
@@ -94,54 +154,6 @@ export const news: IData_SnippetNews[] = [
       {
         value: 'New Zealand',
         count: 0.02,
-      },
-    ],
-  },
-  {
-    ID: 260855435,
-    TI: 'Mobile banking risks persist: 45% of UK users operate on unsecured smartphones',
-    AB: 'A recent study highlights that nearly half of UK consumers use mobile banking on devices lacking proper security measures. Despite concerns about hacking, many neglect antivirus protection on their smartphones, increasing vulnerability to cyber threats. The research, commissioned by a cybersecurity firm, underscores the gap between desktop and mobile security practices among users.',
-    URL: 'https://www.example.com/mobile-banking-risks-uk-2025',
-    DP: '2025-03-07T10:00:00',
-    DOM: 'example.com',
-    SENT: 'positive',
-    LANG: 'en',
-    AU: ['Ivan'],
-    FAV: '/favicons/abc123def456.png',
-    KW: [
-      {
-        value: 'mobile security',
-        count: 8,
-      },
-      {
-        value: 'cybersecurity',
-        count: 6,
-      },
-      {
-        value: 'banking apps',
-        count: 3,
-      },
-    ],
-    HIGHLIGHTS: [
-      '…study reveals that 45% of UK consumers use mobile banking on unsecured smartphones, exposing themselves to potential cyberattacks…',
-      '…despite widespread concern about security breaches, many users fail to install antivirus software on their mobile devices…',
-      '…the research emphasizes the need for improved mobile security awareness and adoption among banking app users…',
-    ],
-    REACH: 2500,
-    CNTR: 'United Kingdom',
-    CNTR_CODE: 'gb',
-    TRAFFIC: [
-      {
-        value: 'United Kingdom',
-        count: 0.85,
-      },
-      {
-        value: 'Canada',
-        count: 0.05,
-      },
-      {
-        value: 'Australia',
-        count: 0.03,
       },
     ],
   },

@@ -1,9 +1,10 @@
 'use client';
 import { FC } from 'react';
 import { Card, Flex, Typography, Button } from 'antd';
-import { CardHeader } from '../CardHeader/CardHeader';
-import type { IData_SnippetNews } from '@/app/types/data';
+import { CardHeader } from '@/app/components/CardHeader/CardHeader';
+import { CardDescription } from '@/app/components/CardDescription/CardDescription';
 import styles from './NewsCard.module.css';
+import type { IData_SnippetNews } from '@/app/types/data';
 
 interface NewsCardProps {
   news: IData_SnippetNews;
@@ -16,7 +17,7 @@ export const NewsCard: FC<NewsCardProps> = ({ news }) => {
     <Card hoverable className={styles.card} key={news.ID}>
       <Flex vertical justify="flex-start" align="start" gap="large">
         <CardHeader news={news} onChange={() => {}} />
-        <Text style={{ color: 'var(--foreground)' }}>CardDescription</Text>
+        <CardDescription news={news} />
         <Button type="link" href={news.URL} className={styles.card__link}>
           Original Source
         </Button>
