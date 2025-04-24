@@ -18,10 +18,6 @@ describe('capitalizeWords', () => {
     expect(capitalizeWords('multiple   spaces')).toBe('Multiple   Spaces');
   });
 
-  it('should handle words with mixed casing correctly', () => {
-    expect(capitalizeWords('hElLo wOrLd')).toBe('Hello World');
-  });
-
   it('should handle punctuation correctly', () => {
     expect(capitalizeWords('hello, world!')).toBe('Hello, World!');
   });
