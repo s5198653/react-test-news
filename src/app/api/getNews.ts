@@ -13,9 +13,9 @@ export async function getNews(): Promise<{
   error?: string;
 }> {
   await delay(500);
-  const randomIndex = Math.floor(Math.random() * 10);
+  const randomIndex = Math.floor(Math.random() * 5);
 
-  if (randomIndex % 3 === 0) {
+  if (randomIndex % 5 === 0) {
     return Promise.reject(getResponse(ResponseType.UNSUCCESSFUL_RESPONSE));
   } else {
     return Promise.resolve(getResponse(ResponseType.SUCCESSFUL_RESPONSE));
