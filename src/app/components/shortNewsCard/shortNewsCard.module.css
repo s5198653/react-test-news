@@ -1,0 +1,17 @@
+.shortCard {
+  width: 100%;
+  overflow: hidden;
+  background-color: var(--background);
+  border-color: var(--secondary);
+  color: var(--foreground);
+}
+
+.shortCard:hover {
+  border-color: var(--neutral);
+}
+
+.shortCard__link {
+  padding: 10px;
+  background-color: var(--secondary-opacity);
+  border-radius: 15px;
+}
