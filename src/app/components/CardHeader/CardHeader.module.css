@@ -1,32 +1,33 @@
-.card__header {
+.cardHeader {
   width: 100%;
 }
 
-.card__header__sent {
+.cardHeader__sent {
   margin: 0;
   border: none;
+  color: var(--background);
 }
 
-.card__header__sent__positive {
+.cardHeader__sent__positive {
   background-color: var(--positive);
 }
 
-.card__header__sent__negative {
+.cardHeader__sent__negative {
   background-color: var(--negative);
 }
 
-.card__header__sent__neutral {
+.cardHeader__sent__neutral {
   background-color: var(--neutral);
 }
 
-.card__header__checkbox :global(.ant-checkbox-inner) {
+.cardHeader__checkbox :global(.ant-checkbox-inner) {
   width: 20px;
   height: 20px;
   border-radius: 0;
   background-color: transparent;
 }
 
-.card__header__info {
+.cardHeader__info {
   padding: 0;
   width: 20px;
   height: 20px;
