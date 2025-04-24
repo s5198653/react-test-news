@@ -1,7 +1,7 @@
 'use client';
 import { FC, useCallback, useEffect, useState } from 'react';
 import { Flex, Typography, Button, Select } from 'antd';
-import { getDuplicatesNews } from '@/app/api/fakeBackend';
+import { getDuplicatesNews } from '@/app/api';
 import {
   IData_DuplicateNews,
   IData_SnippetNews,
