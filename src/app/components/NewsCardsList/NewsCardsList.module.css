@@ -1,3 +1,8 @@
 .alert {
   gap: 20px;
 }
+
+.alert :global(.ant-alert-message),
+.alert :global(.ant-alert-description) {
+  color: var(--negative);
+}
