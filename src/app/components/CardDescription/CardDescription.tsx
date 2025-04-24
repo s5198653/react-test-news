@@ -1,6 +1,6 @@
 'use client';
 import { FC, Fragment } from 'react';
-import { Tag, Flex } from 'antd';
+import { Flex } from 'antd';
 import type { IData_SnippetNews } from '@/app/types/data';
 import styles from './CardDescription.module.css';
 import { ExpandableText } from '@/app/components/ExpandableText/ExpandableText';

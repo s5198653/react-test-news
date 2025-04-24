@@ -1,12 +1,11 @@
 import React, { useState, FC } from 'react';
-import { Tag, Space, Button, Flex } from 'antd';
+import { Tag, Button, Flex } from 'antd';
 import { IData_TagItem } from '@/app/types/data';
 import {
   BankOutlined,
   BugOutlined,
   MobileOutlined,
   SecurityScanOutlined,
-  TeamOutlined,
 } from '@ant-design/icons';
 
 interface ResponsiveTagListProps {

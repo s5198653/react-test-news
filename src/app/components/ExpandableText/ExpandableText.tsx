@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { Typography, Flex } from 'antd';
 import { CaretUpOutlined, CaretDownOutlined } from '@ant-design/icons';
-import styles from './ExpandableText.module.css';
 
 const { Paragraph } = Typography;
 
