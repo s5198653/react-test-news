@@ -28,3 +28,28 @@ export interface IData_TrafficItem {
   value: string; // название страны-источник траффика
   count: number; // объём траффика для указанной страны
 }
+
+export interface IData_DuplicateNews {
+  ID: number; // идентификатор новости
+  ORIGINAL_ID: number;
+  TI: string; // заголовок новости
+  URL: string; // ссылка на новость
+  DOM: string; // домен
+  DP: string; // дата и время публикации новости в формате "%Y-%m-%dT%H:%M:%S")
+  REACH: number; // охват новости
+  AU: string[]; // автор новости
+  CNTR: string; // страна
+  CNTR_CODE: string;
+  RELEVANCE: number;
+}
+
+export enum Sorting {
+  BY_RELEVANCE = 'by relevance',
+  BY_DATE = 'by date',
+}
+
+export enum LoadingType {
+  LOADING = 'loading',
+  LOADED = 'loaded',
+  ERROR = 'error',
+}

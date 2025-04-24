@@ -1,4 +1,4 @@
-import type { IData_SnippetNews } from '@/app/types/data';
+import type { IData_DuplicateNews, IData_SnippetNews } from '@/app/types/data';
 
 export const news: IData_SnippetNews[] = [
   {
@@ -156,5 +156,60 @@ export const news: IData_SnippetNews[] = [
         count: 0.02,
       },
     ],
+  },
+];
+
+export const duplicatedNews: IData_DuplicateNews[] = [
+  {
+    ID: 260855435_1,
+    TI: 'Mobile banking risks persist: 45% of UK users operate on unsecured smartphones',
+    DOM: 'duplicate1-example.com',
+    DP: '2025-03-07T10:00:00',
+    CNTR: 'United Kingdom',
+    CNTR_CODE: 'gb',
+    AU: ['Ivan'],
+    REACH: 2500,
+    ORIGINAL_ID: 260855435,
+    URL: 'https://duplicate1-example.com/mobile-banking-risks-uk-2025',
+    RELEVANCE: 85,
+  },
+  {
+    ID: 260855435_2,
+    TI: 'Mobile banking risks persist: 45% of UK users operate on unsecured smartphones',
+    DOM: 'duplicate2-example.com',
+    DP: '2025-03-08T10:00:00',
+    CNTR: 'United Kingdom',
+    CNTR_CODE: 'gb',
+    AU: ['Ivan'],
+    REACH: 2500,
+    ORIGINAL_ID: 260855435,
+    URL: 'https://duplicate2-example.com/mobile-banking-risks-uk-2025',
+    RELEVANCE: 25,
+  },
+  {
+    ID: 260855435_3,
+    TI: 'Mobile banking risks persist: 45% of UK users operate on unsecured smartphones',
+    DOM: 'duplicate3-example.com',
+    DP: '2025-03-07T10:00:00',
+    CNTR: 'United Kingdom',
+    CNTR_CODE: 'gb',
+    AU: ['Ivan'],
+    REACH: 2500,
+    ORIGINAL_ID: 260855435,
+    URL: 'https://duplicate2-example.com/mobile-banking-risks-uk-2025',
+    RELEVANCE: 86,
+  },
+  {
+    ID: 260855434_1,
+    TI: 'Security gaps in mobile banking: Nearly half of UK consumers at risk using unprotected smartphones',
+    DOM: 'duplicate1-anotherexample.com',
+    DP: '2025-03-08T15:30:00',
+    CNTR: 'United Kingdom',
+    CNTR_CODE: 'gb',
+    AU: ['Emily', 'Lily', 'Mali'],
+    REACH: 2450,
+    ORIGINAL_ID: 260855434,
+    URL: 'https://duplicate1-anotherexample.com/uk-mobile-banking-security-2025',
+    RELEVANCE: 90,
   },
 ];
