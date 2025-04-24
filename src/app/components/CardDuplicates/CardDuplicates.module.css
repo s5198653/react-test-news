@@ -1,0 +1,15 @@
+.cardDuplicates {
+  width: 100%;
+}
+
+.cardDuplicates__filter {
+  width: 100%;
+}
+
+.cardDuplicates__select :global(.ant-select-selector) {
+  color: var(--secondary);
+}
+
+.cardDuplicates__select :global(.ant-select-arrow) {
+  color: var(--secondary);
+}

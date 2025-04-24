@@ -5,14 +5,8 @@ import { Space, Spin, Button, Alert, Flex } from 'antd';
 import { NewsCard } from '@/app/components/NewsCard/NewsCard';
 import { getNews } from '@/app/api/fakeBackend';
 import styles from './NewsCardsList.module.css';
-
 import type { IData_SnippetNews } from '@/app/types/data';
-
-enum LoadingType {
-  LOADING = 'loading',
-  LOADED = 'loaded',
-  ERROR = 'error',
-}
+import { LoadingType } from '@/app/types/data';
 
 export const NewsCardsList = () => {
   const [news, setNews] = useState<IData_SnippetNews[]>([]);

@@ -1,16 +1,15 @@
 'use client';
 import { FC } from 'react';
-import { Card, Flex, Typography, Button } from 'antd';
+import { Card, Flex, Button } from 'antd';
 import { CardHeader } from '@/app/components/CardHeader/CardHeader';
 import { CardDescription } from '@/app/components/CardDescription/CardDescription';
+import { CardDuplicates } from '@/app/components/CardDuplicates/CardDuplicates';
 import styles from './NewsCard.module.css';
 import type { IData_SnippetNews } from '@/app/types/data';
 
 interface NewsCardProps {
   news: IData_SnippetNews;
 }
-
-const { Text } = Typography;
 
 export const NewsCard: FC<NewsCardProps> = ({ news }) => {
   return (
@@ -21,7 +20,7 @@ export const NewsCard: FC<NewsCardProps> = ({ news }) => {
         <Button type="link" href={news.URL} className={styles.card__link}>
           Original Source
         </Button>
-        <Text style={{ color: 'var(--foreground)' }}>CardDuplicates</Text>
+        <CardDuplicates id={news.ID} />
       </Flex>
     </Card>
   );
