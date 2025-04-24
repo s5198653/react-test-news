@@ -11,9 +11,9 @@ interface ShortNewsCardProps {
 
 export const ShortNewsCard: FC<ShortNewsCardProps> = ({ news }) => {
   return (
-    <Card hoverable className={styles.shortCard} key={news.ID}>
+    <Card className={styles.shortCard} key={news.ID}>
       <Flex vertical justify="flex-start" align="start" gap="large">
-        <CardHeader news={news} onChange={() => {}} />
+        <CardHeader news={news} onChange={() => {}} type="duplicate" />
       </Flex>
     </Card>
   );

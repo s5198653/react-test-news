@@ -1,5 +1,6 @@
 'use client';
 import { FC } from 'react';
+import Link from 'next/link';
 import { Flex, Typography, Checkbox, Space, Tag, Tooltip, Button } from 'antd';
 import { UserOutlined, GlobalOutlined } from '@ant-design/icons';
 import { IoBookOutline } from 'react-icons/io5';
@@ -14,11 +15,16 @@ import { capitalize } from '@/app/helpers/capitalize/capitalize';
 interface CardHeaderProps {
   news: IData_SnippetNews | IData_DuplicateNews;
   onChange: () => void;
+  type?: 'duplicate' | 'snippet';
 }
 
-const { Text, Link, Title } = Typography;
+const { Text, Title } = Typography;
 
-export const CardHeader: FC<CardHeaderProps> = ({ news, onChange }) => {
+export const CardHeader: FC<CardHeaderProps> = ({
+  news,
+  onChange,
+  type = 'snippet',
+}) => {
   return (
     <Space direction="vertical" size="small" className={styles.cardHeader}>
       <Flex justify="space-between" gap={20}>
@@ -73,19 +79,26 @@ export const CardHeader: FC<CardHeaderProps> = ({ news, onChange }) => {
           />
         </Flex>
       </Flex>
-
-      <Link href={news.TI} target="_blank">
+      {type === 'snippet' ? (
+        <Link href={`/news/${news.ID.toString()}`}>
+          <Title
+            level={2}
+            style={{ color: 'var(--general)', margin: 0, fontSize: 20 }}>
+            {news.TI}
+          </Title>
+        </Link>
+      ) : (
         <Title
           level={2}
           style={{ color: 'var(--general)', margin: 0, fontSize: 20 }}>
           {news.TI}
         </Title>
-      </Link>
+      )}
 
       <Space size={10} wrap>
         <Flex gap={3} align="center">
           <GlobalOutlined />
-          <Link>{news.DOM}</Link>
+          <Link href={news.DOM}>{news.DOM}</Link>
         </Flex>
 
         <Flex gap={3} align="center">

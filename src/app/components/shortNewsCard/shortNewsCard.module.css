@@ -4,6 +4,7 @@
   background-color: var(--background);
   border-color: var(--secondary);
   color: var(--foreground);
+  cursor: auto;
 }
 
 .shortCard:hover {

@@ -3,7 +3,7 @@ import '@ant-design/v5-patch-for-react-19';
 import { useEffect, useState } from 'react';
 import { Space, Spin, Button, Alert, Flex } from 'antd';
 import { NewsCard } from '@/app/components/NewsCard/NewsCard';
-import { getNews } from '@/app/api/fakeBackend';
+import { getNews } from '@/app/api';
 import styles from './NewsCardsList.module.css';
 import type { IData_SnippetNews } from '@/app/types/data';
 import { LoadingType } from '@/app/types/data';
@@ -37,12 +37,18 @@ export const NewsCardsList = () => {
       {isLoading === LoadingType.ERROR && (
         <Alert
           message="Internal Server Error"
-          description="Please, try again"
+          description="Please, try again!"
           type="error"
           className={styles.alert}
           action={
             <Space>
-              <Button size="large" onClick={fetchData}>
+              <Button
+                size="large"
+                onClick={fetchData}
+                style={{
+                  color: 'var(--background)',
+                  borderColor: 'var(--positive)',
+                }}>
                 Reload
               </Button>
             </Space>
