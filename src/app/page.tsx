@@ -1,6 +1,10 @@
-import { redirect } from 'next/navigation';
+import { Menu } from '@/app/components/Menu/Menu';
+import styles from './page.module.css';
 
 export default function HomePage() {
-  redirect('/news');
-  return null;
+  return (
+    <main className={styles.main}>
+      <Menu />
+    </main>
+  );
 }
