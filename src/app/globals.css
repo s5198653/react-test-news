@@ -7,6 +7,7 @@
   --positive: #b0f37e;
   --negative: #ff4d4f;
   --neutral: #91caff;
+  --value: #e133e1;
 }
 
 html,
@@ -35,4 +36,16 @@ body {
 a {
   color: inherit;
   text-decoration: none;
+}
+
+.operator {
+  color: var(--negative);
+}
+
+.key {
+  color: var(--general);
+}
+
+.value {
+  color: var(--value);
 }
