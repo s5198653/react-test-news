@@ -1,17 +1,14 @@
-interface Result {
-  keys: Set<string>;
-  values: Set<string>;
-  operators: Set<'OR' | 'AND' | 'NOT'>;
+interface Item {
+  index: number;
+  value: string;
+  type: 'key' | 'value' | 'operator';
 }
 
-export const parseTextareaInput = (text: string): Result => {
-  const keys = new Set<string>();
-  const values = new Set<string>();
-  const operators = new Set<string>();
-
+export const parseTextareaInput = (text: string): Item[] => {
   const keyRegex = /^[a-zA-Z]+=/; // 'TI=”Kaspersky=” OR AB=”Avast” OR dp=”Avast” OR d=”Avast” '-> TI=, AB=, dp=, d=
   const operatorRegex = /^\b(OR|AND|NOT)\b/i; // 'OR' || 'AND' || 'NOT' || 'or' || 'and' || 'not'
 
+  const result: Item[] = [];
   let index = 0;
   const len = text.length;
 
@@ -25,25 +22,32 @@ export const parseTextareaInput = (text: string): Result => {
     const rest = text.slice(index);
     const keyMatch = rest.match(keyRegex);
     if (keyMatch) {
-      const key = keyMatch[0].slice(0, -1); //cut off equals sign
-      keys.add(key.toUpperCase());
-      index += keyMatch[0].length;
+      const keyStart = index;
+      const keyRaw = keyMatch[0];
+      const key = keyRaw.slice(0, -1).toUpperCase(); //cut off equals sign
+      index += keyRaw.length;
 
-      if (text[index] === '"') {
+      result.push({
+        index: keyStart,
+        value: key,
+        type: 'key',
+      });
+
+      let value = '';
+      let valueStart = -1;
+
+      if (index < len && text[index] === '"') {
         index++;
-        let value = '';
+        valueStart = index;
         let escaped = false;
-        let closed = false;
-
         while (index < len) {
           const char = text[index];
           if (escaped) {
-            value += char;
+            value += text[index - 1] + char;
             escaped = false;
           } else if (char === '\\') {
             escaped = true;
           } else if (char === '"') {
-            closed = true;
             index++;
             break;
           } else {
@@ -51,24 +55,38 @@ export const parseTextareaInput = (text: string): Result => {
           }
           index++;
         }
-        if (closed) {
-          values.add(value);
-        }
       } else {
+        valueStart = index;
         while (
           index < len &&
           !/\s/.test(text[index]) &&
-          !text.slice(index).match(operatorRegex)
+          !operatorRegex.test(text.slice(index))
         ) {
+          value += text[index];
           index++;
         }
       }
+
+      if (value) {
+        result.push({
+          index: valueStart,
+          value,
+          type: 'value',
+        });
+      }
+
       continue;
     }
 
     const operatorMatch = rest.match(operatorRegex);
     if (operatorMatch) {
-      operators.add(operatorMatch[0].toUpperCase());
+      const opStart = index;
+      const op = operatorMatch[0].toUpperCase();
+      result.push({
+        index: opStart,
+        value: op,
+        type: 'operator',
+      });
       index += operatorMatch[0].length;
       continue;
     }
@@ -76,5 +94,5 @@ export const parseTextareaInput = (text: string): Result => {
     index++;
   }
 
-  return { keys, values, operators: operators as Set<'OR' | 'AND' | 'NOT'> };
+  return result;
 };
